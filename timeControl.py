@@ -5,7 +5,8 @@ import csv
 
 def help():
     print("Enter s to start counting your worktime")
-    print("Once started, enter p to pause, r to resume or s to stop the clock")
+    #TODO: print("Once started, enter p to pause, r to resume or s to stop the clock")
+    print("Once started type s to stop the clock and h to get help")
     print("Enter q to quit")
 
 def invalid():

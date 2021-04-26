@@ -1,7 +1,7 @@
 # TimeControl
 ## Installation 
 
-Download as ZIP, and extract the files.
+Download as ZIP and extract the files.
 
 ## Running
 
@@ -12,7 +12,7 @@ python3 timeControl.py
 Once started, type h to get the following message:
 ```
 Enter s to start counting your worktime
-Once started, enter p to pause, r to resume or s to stop the clock
+Once started type s to stop the clock and h to get help
 Enter q to quit
 ```
 
