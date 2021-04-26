@@ -11,7 +11,7 @@ def help():
 def invalid():
     print("Invalid input")
 
-csv_columns = ['Day', 'Hour', 'WorkTime']
+csv_columns = ['Day', 'Hour', 'WorkTime', 'Concept']
 csv_file = "data.csv"
 
 def runClock():
@@ -23,13 +23,14 @@ def runClock():
     while(not finished):
         entrada = input()
         if entrada == "s":
+            concept = input("Enter work done: ")
             finishTime = datetime.now()
             worktime = finishTime - startTime
-            print("The " + initDay + " at " + initHour + " worked " + str(worktime))
+            print("The " + initDay + " at " + initHour + " worked " + str(worktime) + " in " + concept)
             try:
                 with open(csv_file, 'a') as csvfile:
                     writer = csv.DictWriter(csvfile, delimiter=';', fieldnames=csv_columns)
-                    writer.writerow({'Day': initDay, 'Hour': initHour, 'WorkTime': str(worktime)})
+                    writer.writerow({'Day': initDay, 'Hour': initHour, 'WorkTime': str(worktime), 'Concept': concept})
             except IOError:
                 print("I/O error")
             finished = True
