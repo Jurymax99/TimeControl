@@ -1,7 +1,5 @@
 from datetime import datetime
-import time
-import os
-import csv
+import time, os, csv
 
 def help():
     print("Enter s to start counting your worktime")
